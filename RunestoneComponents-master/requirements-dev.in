@@ -1,0 +1,11 @@
+# *********
+# |docname|
+# *********
+wheel
+twine
+pip-tools
+selenium>=2.53.6
+pyvirtualdisplay
+pytest
+pylint
+readme-renderer>24
