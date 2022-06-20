@@ -1,2 +1,2 @@
-# runeProject
-where we work on Discrete Math
+# rsmComponents
+## Runestone Components Repo
