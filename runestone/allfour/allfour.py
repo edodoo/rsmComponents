@@ -56,9 +56,9 @@ class AllFour(Directive):
 
 def setup(app):
     app.add_directive('allfour', AllFour)
-    app.add_js_file('bookfuncs.js')
-    app.add_js_file('skulpt/dist/skulpt.js')
-    app.add_js_file('skulpt/dist/builtin.js')
+    app.add_javascript('bookfuncs.js')
+    app.add_javascript('skulpt/dist/skulpt.js')
+    app.add_javascript('skulpt/dist/builtin.js')
 
     app.connect('doctree-resolved', process_allfour_nodes)
     app.connect('env-purge-doc', purge_allfours)
