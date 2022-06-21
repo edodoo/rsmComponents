@@ -1,2 +1,0 @@
-# rsmComponents
-### Runestone Master Components 
