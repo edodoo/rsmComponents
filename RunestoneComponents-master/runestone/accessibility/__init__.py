@@ -1,4 +1,0 @@
-# *********
-# |docname|
-# *********
-from .accessibility import *
