@@ -61,9 +61,10 @@ class PermutationTool(Directive): #One class for every directive
 #Initialization
 def setup(app):
     app.add_directive('permutationtool', PermutationTool) #maps permuatationtool directive to PermuationTool class
-    app.add_javascript('bookfuncs.js') #jst files we want to include
-    app.add_javascript('skulpt/dist/skulpt.js')
-    app.add_javascript('skulpt/dist/builtin.js')
+    # updated app.add_javascript() to app.add_js_file() in 65-67
+    app.add_js_file('bookfuncs.js') #jst files we want to include
+    app.add_js_file('skulpt/dist/skulpt.js')
+    app.add_js_file('skulpt/dist/builtin.js')
 
     app.connect('doctree-resolved', process_permutationtool_nodes)
     app.connect('env-purge-doc', purge_permutationtools)
