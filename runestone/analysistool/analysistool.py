@@ -51,6 +51,7 @@ class AnalysisTool(Directive):
 #Initialization
 def setup(app):
     app.add_directive('analysistool', AnalysisTool)
+     # updated app.add_javascript() to app.add_js_file() in 55-57
     app.add_js_file('bookfuncs.js')
     app.add_js_file('skulpt/dist/skulpt.js')
     app.add_js_file('skulpt/dist/builtin.js')
