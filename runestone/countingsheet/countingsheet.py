@@ -62,9 +62,10 @@ class CountingSheet(Directive):
 
 def setup(app):
     app.add_directive('countingsheet', CountingSheet)
-    app.add_javascript('bookfuncs.js')
-    app.add_javascript('skulpt/dist/skulpt.js')
-    app.add_javascript('skulpt/dist/builtin.js')
+    # updated app.add_javascript() to app.add_js_file() in 66-68
+    app.add_js_file('bookfuncs.js')
+    app.add_js_file('skulpt/dist/skulpt.js')
+    app.add_js_file('skulpt/dist/builtin.js')
 
     app.connect('doctree-resolved', process_countingsheet_nodes)
     app.connect('env-purge-doc', purge_countingsheets)
