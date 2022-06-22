@@ -45,9 +45,10 @@ class ProgrammedCountingTool(Directive):
 
 def setup(app):
     app.add_directive('programmedcountingtool', ProgrammedCountingTool)
-    app.add_javascript('bookfuncs.js')
-    app.add_javascript('skulpt/dist/skulpt.js')
-    app.add_javascript('skulpt/dist/builtin.js')
+    # updated app.add_javascript() to app.add_js_file() in 49-51
+    app.add_js_file('bookfuncs.js')
+    app.add_js_file('skulpt/dist/skulpt.js')
+    app.add_js_file('skulpt/dist/builtin.js')
 
     app.connect('doctree-resolved', process_programmedcountingtool_nodes)
     app.connect('env-purge-doc', purge_programmedcountingtools)
